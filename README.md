@@ -1,4 +1,4 @@
-# Odoo Docker Database Restore Tool
+# Odoo Docker Database Backup and Restore Tool
 
 ## Overview
 The Odoo Docker Database Restore Tool is a Python script designed to automate the process of restoring Odoo databases from backup files. This tool is particularly useful for system administrators and developers who need to manage Odoo instances running in Docker containers. The script handles the entire restore process, including verifying backup integrity, stopping and starting containers, and restoring both the database and filestore.
