@@ -70,6 +70,81 @@ The restore script performs the following steps:
 8. **Cleanup**: Cleans up temporary files used during the restoration process.
 
 ## Example
+================================
+SYSTEM INFORMATION
+================================
+Time: 2024-11-30 14:59:38
+IP Address: 192.168.1.100
+OS: Ubuntu 20.04.1 LTS
+================================
+
+System Information:
+• Hostname: your-hostname
+• Date: 2024-11-30 14:59:38
+• User: your-username
+
+Available backups:
+==================
+1. odoo_full_backup_ok_20241130_145935.tar.gz (2.0M) - 2024-11-30 14:59:38
+2. odoo_full_backup_ok_20241130_110320.tar.gz (1.2M) - 2024-11-30 11:03:27
+3. odoo_full_backup_ok_20241130_152047.tar.gz (2.0M) - 2024-11-30 15:20:50
+
+Select backup number [1-3]: 3
+Verifying backup integrity...
+
+Detecting Docker containers...
+
+Available PostgreSQL containers:
+================================
+ID: 5d6aa362afce | Name: odoo-one-db-1
+
+Enter PostgreSQL container ID or name: 5d6aa362afce
+
+Available Odoo containers:
+================================
+ID: 7e2b4c8a1b3f | Name: odoo-one-web-1
+
+Enter Odoo container ID or name: 7e2b4c8a1b3f
+Enter database user [default: odoo]:
+Extracted database name: ok
+Enter target database name [default: ok]:
+Warning: Database 'ok' already exists
+Do you want to drop and recreate it? [y/n]: y
+
+=== Restore Summary ===
+Selected Backup: odoo_full_backup_ok_20241130_152047.tar.gz
+Database Container: 5d6aa362afce
+Odoo Container: 7e2b4c8a1b3f
+Target Database: ok
+Temporary Directory: /tmp/tmpabc123
+
+WARNING: This will overwrite the database and filestore if they exist!
+Do you want to proceed with the restore? [y/n]: y
+
+Preparing for restore...
+Stopping Odoo service...
+Restoring database...
+Dropping existing database if exists...
+Creating new database...
+Restoring database content...
+Restoring filestore...
+Creating filestore directory...
+Copying filestore data...
+Filestore restored successfully
+Starting Odoo service...
+Cleaning up temporary files...
+
+=== Restore Completed Successfully ===
+Timestamp: 2024-11-30 15:30:00
+Restored From: odoo_full_backup_ok_20241130_152047.tar.gz
+Target Database: ok
+
+Waiting for Odoo to start...
+Recent Odoo logs:
+2024-11-30 15:30:00 INFO: Odoo server is starting...
+...
+
+Restore process completed!
 
 ### Backup
 
