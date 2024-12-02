@@ -23,16 +23,17 @@ The Odoo Docker Database Restore Tool is a Python script designed to automate th
    git clone https://github.com/pro-777/odoo-docker-backup-restore.git
    cd odoo-docker-backup-restore
    Ensure you have the necessary permissions to run Docker commands and access the backup directory.
-Usage
+
+## Usage
+
 Place your backup files in the specified backup directory (default: /opt/odoo-backups).
 
-Usage
-Place your backup files in the specified backup directory (default: /opt/odoo-backups).
-Run the script:
+
+## Run the script:
 ./odoo_backup
 ./odoo_restore
 
-Script Workflow
+## Script Workflow
 Print Banner: Displays system information and a welcome banner.
 List Backups: Lists available backup files in the specified directory.
 Select Backup: Prompts the user to select a backup file.
@@ -56,10 +57,10 @@ Container Management: The script handles starting and stopping containers with m
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request if you have any suggestions or improvements.
 
-icense
+L## icense
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Contact
+## Contact
 For any questions or support, please contact Mostafa Elhavari.
 
 
