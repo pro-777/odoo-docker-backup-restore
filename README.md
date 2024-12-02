@@ -23,7 +23,7 @@ The Odoo Docker Database Backup and Restore Tool is a Python script designed to 
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/odoo-backup-restore.git
+    git clone https://github.com/yourusername/odoo-docker-backup-restore.git
     cd odoo-backup-backup-restore
  
 
